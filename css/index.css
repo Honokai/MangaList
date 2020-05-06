@@ -1,0 +1,202 @@
+
+body {
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    
+}
+
+/* seção superior */
+nav.top {
+    
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.616);
+    width: 100%;
+    height: fit-content;
+    padding: 15px;
+    z-index: 1;
+
+}
+
+.navtitulo {
+
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    color: white;
+    
+}
+
+.top-direita {
+
+    float: right;
+    padding-right: 30px;
+
+}
+
+.top-direita > a {
+
+    font-family: 'Bangers', cursive;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+.top-direita > a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+/* FIM SEÇÃO SUPERIOR*/
+/* PARALLAX */
+
+.parallax-footer,
+.parallax-main,
+.parallax-top {
+    
+    background: url("../img/naruto.png");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.parallax-main {
+
+    height: 500px !important;
+
+}
+
+.parallax-footer {
+
+    height: 200px !important;
+
+}
+
+/* Parte dentro de main */
+
+.main {
+
+    position: relative;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.889);
+    height: fit-content;
+   /* border-top-left-radius: 40px;
+    border-top-right-radius: 40px; */
+    padding-bottom: 20px;
+    
+}
+
+.conteudo1 {
+
+    display: block;
+    color: white;
+
+}
+
+.conteudo2 {
+    
+    padding-top: 5px;
+    color: white;
+    display: none;
+    padding-left: 20px;
+
+}
+
+input {
+    
+    border: 1px solid rgba(0, 0, 0, 0.411);
+    border-radius: 5px;
+    height: 20px;
+
+}
+
+input:hover {
+
+    box-shadow: 0px 0px 18px violet;
+
+}
+
+#ctitulo {
+
+    padding-left: 20px;
+    padding-top: 20px;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+
+}
+
+#cmain {
+    
+    display: block;
+    padding: 20px;
+
+}
+
+@media (max-width: 600px) {
+    
+    .parallax-main,.parallax-footer,.parallax-top{
+        background-attachment: scroll;
+    }
+
+    #cmain {
+
+        padding: 20px;
+        padding-left: 60px;
+    
+    }
+    
+
+}
+
+.cmanga {
+
+    
+    position: relative;
+    max-width: 170px;
+    max-height: 277px;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.mimagem {
+
+    width: fit-conent;
+
+}
+
+#cmain > .cmanga > .mimagem> img {
+
+    border: 2px solid white;
+    max-height: 200px;
+    border-radius: 10px;
+
+    
+}
+
+.cont {
+    
+    font-family: 'Anton', sans-serif;
+    font-size: 13px;
+    width: fit-content;
+}
+
+.cont > .alem {
+    width: 127px;
+    font-size: initial;
+    height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+
+}
