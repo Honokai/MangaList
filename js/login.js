@@ -7,12 +7,19 @@ $(document).ready(function(){
 
     });
 
-    $("#senha").on("focusout", function(){
-        if($("#usuario").val() != ""){
-            $("#enviar").prop('disabled', false);
-        }else{
-            $("#enviar").prop('disabled', true);
-        }
+    $("#senha,#usuario").on("focusout", function(){
+        habilitar(); //chamada de função para habilitar botão de envio
     });
 
 });
+
+/*
+Função para habilitar botão de envio de login
+*/
+function habilitar() {
+    if($("#usuario,#senha").val() != "" & $("#senha").val() != ""){
+        $("#enviar").prop('disabled', false);
+    }else{
+        $("#enviar").prop('disabled', true);
+    }
+}

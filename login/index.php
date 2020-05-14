@@ -16,7 +16,7 @@
     <nav class="top">
         <a class="navtitulo">Meus Mangas</a>
         <div class="top-direita">
-            <a href="../" onclick="showMain()">Login</a>
+            <a href="../" onclick="showMain()">Início</a>
             <a href="#">Novidades</a>
             <a href="#" onclick="showRec()">Recomendações</a>
         </div>
@@ -30,6 +30,7 @@
                 <p></p>
                 Senha <br>
                 <input type="password" name="senha" id="senha" autocomplete>
+                <input type="text" name="try" value="0" style="display: none">
                 <div class="fundo">
                     <button type="submit" id="enviar" class="enviar" disabled>Entrar</button>
                 </div>
