@@ -8,7 +8,7 @@ $char->execute();
 
 $resultado = $conexao->prepare($query);
 $resultado->execute();
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +27,20 @@ $resultado->execute();
     <nav class="top">
         <a class="navtitulo">Meus Mangas</a>
         <div class="top-direita">
-            <a href="login" onclick="showMain()">Login</a>
+            <?php 
+                if(!isset($_SESSION['usuario'])){
+                    echo "<a href='login'>Login</a>";
+                }else{
+                    echo "<a href=''>{$_SESSION['usuario']}</a>";
+                }
+            ?>
             <a href="#">Novidades</a>
             <a href="#" onclick="showRec()">Recomendações</a>
+            <?php 
+                if(isset($_SESSION['usuario'])){
+                    echo "<a href='login/sair.php'>Sair</a>";
+                }
+            ?>
         </div>
     </nav>
     <div class="parallax-top"></div>

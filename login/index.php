@@ -21,7 +21,9 @@
             <a href="#" onclick="showRec()">Recomendações</a>
         </div>
     </nav>
-
+    <div class="alertas" id="alertas"><a id="fecharAlerta" href="#">X</a>
+    <section id="informacao"></section> 
+    </div>
     <div class="conteudo">
         <div class="loginform" id="loginform">
             <form action="login.php" method="POST">
@@ -41,7 +43,7 @@
 
         <div class="registroform" id="registroform">
             <form action="registrar.php" method="POST">
-                Informe os campos a seguir: <p></p>
+                <p>Informe os campos a seguir: </p>
                 E-mail <br>
                 <input type="text" name="email" id="email" autocomplete><br>
                 Usuário <br>

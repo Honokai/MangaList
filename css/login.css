@@ -194,3 +194,36 @@ form a{
     font-family: 'Bangers', cursive;
     transition: 1s;
 }
+
+.alertas {
+    text-align: right;
+    display: none;
+    position: absolute;
+    margin-top: 60px;
+    padding: 10px;
+    right: 10px;
+    border-radius: 10px;
+    background-color: blueviolet;
+    width: max-content;
+}
+
+.alertas #informacao {
+    color: white;
+    font-family: 'Bangers', cursive;
+    text-align: left;
+    float: right;
+    margin-right: 10px;
+}
+
+.alertas a  {
+    float: right;
+    margin-right: 5px;
+    color: black;
+    text-decoration: none;
+    font-family: monospace;
+    background-color: white;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;   
+}

@@ -3,10 +3,13 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if ($_POST['try'] == 0) {
-     
+        require("../config/Banco.php");
+        $bd = new BancoDados;
         $nome = filter_var($_POST['usuario'], FILTER_SANITIZE_STRING);
         $senha = md5($_POST['senha']);
-        echo $senha;
+
+        $bd->login($nome,$senha);
+
     }
     
 

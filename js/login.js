@@ -7,10 +7,20 @@ $(document).ready(function(){
 
     });
 
+    $("#usuario,#usuario1").on("focusout", function(){
+
+       verificarUsuario();
+
+    });
+
     $("#senha,#usuario").on("focusout", function(){
         habilitar(); //chamada de função para habilitar botão de envio
     });
-
+    
+    $("#fecharAlerta").on("click", function(){
+        document.getElementById("alertas").style.display = "none";
+    });
+    
 });
 
 /*
@@ -22,4 +32,23 @@ function habilitar() {
     }else{
         $("#enviar").prop('disabled', true);
     }
+}
+
+function verificarUsuario(){
+    $.ajax({
+        url: "../login/verU.php",
+        type:"GET",
+        data: {"usuario" : document.getElementById("usuario").value },
+        success: function(data,status){
+            //console.log(status);
+            //document.getElementById("alertas").style.display = "block";
+            //console.log(data.dado);
+            //document.getElementById("informacao").innerHTML = JSON.parse(data);
+        },
+        error: function(data){
+            document.getElementById("alertas").style.display = "block";
+            //console.log(data);
+            document.getElementById("informacao").innerHTML = JSON.parse(data.responseText);
+        }
+    });
 }
