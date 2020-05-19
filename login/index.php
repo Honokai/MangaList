@@ -61,8 +61,8 @@
                 </div>
             </form>
         </div>
-
-
     </div>
+
+    <?php include("../ins/f.php");?>
 </body>
 </html>

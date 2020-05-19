@@ -1,9 +1,10 @@
 <nav class="top">
-    <a class="navtitulo">Meus Mangas</a>
+    <a class="navtitulo" href="index.php">Meus Mangas</a>
     <div class="top-direita" id="menu">
         <?php 
             if(!isset($_SESSION['usuario'])){
-                echo "<a href='login'>Login</a>";
+                $base = $_SERVER['SERVER_NAME'];
+                echo "<a href='" . "http://".$base."/login'>Login</a>";
             }else{
                 echo "<a href=''>{$_SESSION['usuario']}</a>";
             }
@@ -25,10 +26,20 @@
             <div class="bars"></div>
             <div class="bars"></div>
             <ul class="menu-fall" id="lista">
-                <li>Item 1</li>
+            <?php 
+                if(!isset($_SESSION['usuario'])){
+                    echo "<li><a href='" . "http://".$base."/login'>Login</a></li>";;
+                }else{
+                    echo "<li><a href=''>{$_SESSION['usuario']}</a></li>";
+                }
+            ?>
                 <li><a href="#">Novidades</a></li>
                 <li><a href="#" onclick="showRec()">Recomendações</a></li>
-                <li>Item 4</li>
+                <?php 
+                    if(isset($_SESSION['usuario'])){
+                        echo "<li><a href='login/sair.php'>Sair</a></li>";
+                    }
+                ?>
             </ul>
         </div>
         

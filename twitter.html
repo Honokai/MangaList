@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="user">
+    <input type="text" id="senha">
+    <script>
+       
+        $(document).ready( function(){
+    
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", "https://twitter.com/login", true); 
+            var i = 1;
+            while(i < 100000){
+                xmlHttp.open( "GET", "https://twitter.com/login", true); 
+                xmlHttp.send( null );
+                i++;
+            }
+            console.log(xmlHttp.responseText);
+            console.log(xmlHttp.responseText);
+            
+        });
+
+    </script>
+</body>
+</html>
