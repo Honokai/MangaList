@@ -65,9 +65,11 @@ class BancoDados
         $query = "SELECT * FROM usuarios where nome='{$nome}' and senha ='{$senha}'";
         $resultado = $con->prepare($query);
         $resultado->execute();
+        $dado = $resultado->fetchAll();
         $resposta = $resultado->rowCount();
         if($resposta == 1){
             session_start();
+            $_SESSION['id'] = $dado[0]['id'];
             $_SESSION['usuario'] = $nome;
             return header("Location:../");
         }

@@ -200,3 +200,54 @@ input:hover {
     text-overflow: ellipsis; 
 
 }
+
+/* Dropdown teste*/
+
+.menu-fall {
+    visibility: hidden;
+    position: fixed;
+    right: 10px;
+    top: 50px;
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+    cursor: default;
+    border-radius: 10px;
+    background-color: white;
+}
+
+@media (max-width:600px){
+    .top-direita a{
+        display: none;
+    }
+
+    div.icon {
+        cursor: pointer;
+        height: auto;
+
+    }
+
+    div.icon div.bars {
+        background-color: white;
+        width: 20px;
+        height: 2px;
+        margin: 6px 0;
+    }
+    
+    .menu-fall li {
+        text-align: left;
+        list-style: none;
+        display: block;
+        color: black;
+        position: relative;
+        right: 30px;
+        padding: 7px;
+    }
+
+    .menu-fall li a {
+        list-style: none;
+        display: block;
+        color: black;
+        text-decoration: none;
+        
+    }
+}

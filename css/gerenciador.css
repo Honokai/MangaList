@@ -10,7 +10,7 @@ body {
 
 /* seção superior */
 nav.top {
-    
+    overflow: hidden;
     top: 0;
     left: 0;
     position: fixed;

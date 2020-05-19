@@ -7,20 +7,24 @@
     <link rel="stylesheet" href="../css/login.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../js/login.js"></script>
-
+    <?php
+        /* Inicia a sessão para pegar as variáveis globais nela salva*/
+        session_start();
+        /* Verifica se há uma sessão, caso não haja carrega a página normalmente,
+         se não redireciona para a página principal */
+        if(!isset($_SESSION['usuario'])){}
+        else{
+            header("Location: ../index.php");
+        }
+    ?>
     
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     
 </head>
 <body>
-    <nav class="top">
-        <a class="navtitulo">Meus Mangas</a>
-        <div class="top-direita">
-            <a href="../" onclick="showMain()">Início</a>
-            <a href="#">Novidades</a>
-            <a href="#" onclick="showRec()">Recomendações</a>
-        </div>
-    </nav>
+    <?php 
+        include("../ins/menu-top.php");
+    ?>
     <div class="alertas" id="alertas"><a id="fecharAlerta" href="#">X</a>
     <section id="informacao"></section> 
     </div>

@@ -24,30 +24,15 @@ session_start();
 
 </head>
 <body>
-    <nav class="top">
-        <a class="navtitulo">Meus Mangas</a>
-        <div class="top-direita">
-            <?php 
-                if(!isset($_SESSION['usuario'])){
-                    echo "<a href='login'>Login</a>";
-                }else{
-                    echo "<a href=''>{$_SESSION['usuario']}</a>";
-                }
-            ?>
-            <a href="#">Novidades</a>
-            <a href="#" onclick="showRec()">Recomendações</a>
-            <?php 
-                if(isset($_SESSION['usuario'])){
-                    echo "<a href='login/sair.php'>Sair</a>";
-                }
-            ?>
-        </div>
-    </nav>
+    <?php 
+        include("ins/menu-top.php");
+    ?>
     <div class="parallax-top"></div>
     <div class="parallax-main">
         <div class="main">
             <div class="conteudo1" id="c1">
                 <div id="ctitulo">Seu site preferido para guardar sua lista de mangá!</div>
+                
                 <div id="cmain">
                         <?php  
                         foreach($resultado as $key)
@@ -70,15 +55,6 @@ session_start();
     </div>
     
     <div class="parallax-footer"></div>
-<script>
-    function showMain() {
-        document.getElementById('c2').style.display = "none";
-        document.getElementById('c1').style.display = "block";
-    }
-    function showRec() {
-        document.getElementById('c1').style.display = "none";
-        document.getElementById('c2').style.display = "block";
-    }
-</script>
+<?php include("ins/f.php"); ?>
 </body>
 </html>
