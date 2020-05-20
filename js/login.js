@@ -12,10 +12,6 @@ $(document).ready(function(){
        verificarUsuario();
 
     });
-
-    $("#senha,#usuario").on("focusout", function(){
-        habilitar(); //chamada de função para habilitar botão de envio
-    });
     
     $("#fecharAlerta").on("click", function(){
         document.getElementById("alertas").style.display = "none";
@@ -25,7 +21,8 @@ $(document).ready(function(){
 
 /*
 Função para habilitar botão de envio de login
-*/
+
+
 function habilitar() {
     if($("#usuario,#senha").val() != "" & $("#senha").val() != ""){
         $("#enviar").prop('disabled', false);
@@ -33,7 +30,7 @@ function habilitar() {
         $("#enviar").prop('disabled', true);
     }
 }
-
+*/
 function verificarUsuario(){
     $.ajax({
         url: "../login/verU.php",

@@ -101,7 +101,7 @@ div.conteudo {
 
     padding: 50px;
     background-color: rgba(0, 0, 0, 0.685);
-    text-align: left;
+    text-align: center;
     margin-top: 220px;    
     display: inline-block;
     color: white;
@@ -119,10 +119,14 @@ div.conteudo {
         height: auto !important; 
 
     }
+    
+    form {
+        text-align: center;
+    }
 
     .loginform {
-
-        margin-top: 320px;
+        
+        margin-top: 220px;
     
     }
 
@@ -135,7 +139,7 @@ input {
     height: 25px;
     border-radius: 5px;
     border: 1px solid red;
-
+    
 }
 
 input:focus-within{
@@ -150,6 +154,8 @@ input:focus-within{
     font-size: 15px;
     border-radius: 25px;
     padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     color: white;
     background-color: red;
     border: 1px solid red;
@@ -176,7 +182,6 @@ input:focus-within{
 
 }
 
-
 form a{
     text-decoration: none;
     color: white;
@@ -196,6 +201,13 @@ form a{
     transition: 1s;
 }
 
+p#erro {
+    color: red;
+    background-color: white;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 15px;
+}
 .alertas {
     text-align: right;
     display: none;

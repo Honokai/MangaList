@@ -31,17 +31,24 @@
     <div class="conteudo">
         <div class="loginform" id="loginform">
             <form action="login.php" method="POST">
-                Usuário <br>
+                <text>Usuário</text> <br>
                 <input type="text" name="usuario" id="usuario" autocomplete>
                 <p></p>
-                Senha <br>
+                <text>Senha</text> <br>
                 <input type="password" name="senha" id="senha" autocomplete>
                 <input type="text" name="try" value="0" style="display: none">
                 <div class="fundo">
-                    <button type="submit" id="enviar" class="enviar" disabled>Entrar</button>
+                    <button type="submit" id="enviar" class="enviar">Entrar</button>
                 </div>
                 <p></p>
                 <a id="registro" href="#">Não tem conta? Clique aqui.</a>
+                <?php 
+
+                    if(isset($_GET['y']) && $_GET['y'] == '1'){
+                        echo "<p id='erro'>Senha ou usuário informado incorreto.</p>";
+                    }
+                    
+                ?>
             </form>
         </div>
 

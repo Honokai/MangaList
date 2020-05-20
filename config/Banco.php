@@ -72,6 +72,8 @@ class BancoDados
             $_SESSION['id'] = $dado[0]['id'];
             $_SESSION['usuario'] = $nome;
             return header("Location:../");
+        }else{
+            return header("Location:../login?y=1");
         }
     }
 
